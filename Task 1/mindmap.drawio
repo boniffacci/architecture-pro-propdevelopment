@@ -1,0 +1,109 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36" version="28.2.5">
+  <diagram id="security-mindmap" name="Безопасность данных">
+    <mxGraphModel dx="1185" dy="1110" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="central" value="Безопасность данных" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=18;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="700" y="400" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pub" value="Публичные данные" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="200" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pub_edge" parent="1" source="central" target="pub" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pub_ex" value="Описание ЖК, фото, цены, отчёты" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="285" y="130" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pub_ex_edge" parent="1" source="pub" target="pub_ex" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pub_risk" value="Риск: искажение данных (значительный)" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="150" y="300" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pub_risk_edge" parent="1" source="pub" target="pub_risk" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pub_reason" value="Причина: изменение контента злоумышленником может вызвать юридические споры и репутационные потери" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="390" width="330" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pub_reason_edge" parent="1" source="pub_risk" target="pub_reason" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="int" value="Внутренние данные" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1100" y="200" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="int_edge" parent="1" source="central" target="int" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="int_ex" value="Отчёты, инструкции, схемы, конфигурации" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1330" y="150" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="int_ex_edge" parent="1" source="int" target="int_ex" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="int_risk" value="Риски: утечка и потеря данных (значительный)" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1360" y="250" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="int_risk_edge" parent="1" source="int" target="int_risk" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="int_reason" value="Причина: несанкционированный доступ раскрывает уязвимости, потеря данных при сбоях резервного копирования" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1340" y="320" width="340" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="int_reason_edge" parent="1" source="int_risk" target="int_reason" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conf" value="Конфиденциальные данные" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="600" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="conf_edge" parent="1" source="central" target="conf" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conf_ex" value="ПДн клиентов, платежи, история сделок, данные IoT" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="650" width="310" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conf_ex_edge" parent="1" source="conf" target="conf_ex" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conf_risk" value="Риски: утечка и искажение данных (критический)" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="720" width="340" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conf_risk_edge" parent="1" source="conf" target="conf_risk" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conf_reason" value="Причина: несогласованные API партнёров, случаи отображения чужих данных, нарушение защиты ПДн" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="790" width="360" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="conf_reason_edge" parent="1" source="conf_risk" target="conf_reason" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sec" value="Секретные данные" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1100" y="600" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sec_edge" parent="1" source="central" target="sec" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sec_ex" value="Финансовые отчёты, ключи API, BI и ML данные" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1330" y="650" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sec_ex_edge" parent="1" source="sec" target="sec_ex" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sec_risk" value="Риски: утечка, потеря, обесценивание (критический)" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1340" y="720" width="310" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sec_risk_edge" parent="1" source="sec" target="sec_risk" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sec_reason" value="Причина: компрометация токенов, потеря BI-данных, утечка финансовой информации — прямые убытки и остановка бизнеса" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1320" y="790" width="360" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sec_reason_edge" parent="1" source="sec_risk" target="sec_reason" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
