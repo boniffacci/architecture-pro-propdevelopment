@@ -1,0 +1,119 @@
+[
+  {
+    "kind": "Event",
+    "level": "RequestResponse",
+    "verb": "get",
+    "user": {
+      "username": "system:serviceaccount:secure-ops:monitoring",
+      "uid": "a3f4c1d2b5e67890abcd1234"
+    },
+    "objectRef": {
+      "resource": "secrets",
+      "namespace": "kube-system",
+      "name": "default-token-abcde"
+    },
+    "responseStatus": {
+      "code": 200
+    },
+    "timestamp": "2025-10-05T12:00:01Z"
+  },
+  {
+    "kind": "Event",
+    "level": "RequestResponse",
+    "verb": "create",
+    "user": {
+      "username": "system:serviceaccount:secure-ops:monitoring",
+      "uid": "b6e7f8a9c1d23456efab7890"
+    },
+    "objectRef": {
+      "resource": "pods",
+      "namespace": "secure-ops",
+      "name": "privileged-pod"
+    },
+    "requestObject": {
+      "spec": {
+        "containers": [
+          {
+            "name": "pwn",
+            "securityContext": {
+              "privileged": true
+            }
+          }
+        ]
+      }
+    },
+    "responseStatus": {
+      "code": 201
+    },
+    "timestamp": "2025-10-05T12:01:10Z"
+  },
+  {
+    "kind": "Event",
+    "level": "RequestResponse",
+    "verb": "create",
+    "user": {
+      "username": "system:serviceaccount:secure-ops:monitoring",
+      "uid": "c2d3e4f5a67890b1c2d34567"
+    },
+    "objectRef": {
+      "resource": "pods",
+      "namespace": "kube-system",
+      "name": "coredns-xyz"
+    },
+    "subresource": "exec",
+    "responseStatus": {
+      "code": 201
+    },
+    "timestamp": "2025-10-05T12:02:05Z"
+  },
+  {
+    "kind": "Event",
+    "level": "RequestResponse",
+    "verb": "delete",
+    "user": {
+      "username": "admin",
+      "uid": "d1e2f3a4b567890c1234abcd"
+    },
+    "objectRef": {
+      "resource": "auditpolicies",
+      "namespace": "",
+      "name": "audit-policy.yaml"
+    },
+    "responseStatus": {
+      "code": 200
+    },
+    "timestamp": "2025-10-05T12:03:20Z"
+  },
+  {
+    "kind": "Event",
+    "level": "RequestResponse",
+    "verb": "create",
+    "user": {
+      "username": "system:serviceaccount:secure-ops:monitoring",
+      "uid": "e5f6a7b8c9012345d6789abc"
+    },
+    "objectRef": {
+      "resource": "rolebindings",
+      "namespace": "secure-ops",
+      "name": "escalate-binding"
+    },
+    "requestObject": {
+      "roleRef": {
+        "kind": "ClusterRole",
+        "name": "cluster-admin",
+        "apiGroup": "rbac.authorization.k8s.io"
+      },
+      "subjects": [
+        {
+          "kind": "ServiceAccount",
+          "name": "monitoring",
+          "namespace": "secure-ops"
+        }
+      ]
+    },
+    "responseStatus": {
+      "code": 201
+    },
+    "timestamp": "2025-10-05T12:04:00Z"
+  }
+]
